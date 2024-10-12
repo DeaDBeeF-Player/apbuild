@@ -8,6 +8,7 @@ if (!defined $ARCH) {
     exit -1;
 }
 
-`cp apsymbols.h.$ARCH apsymbols.h`;
+system "./buildlist.$ARCH";
+system "cp apsymbols.h.$ARCH apsymbols.h";
 
 
