@@ -9,7 +9,8 @@ if [ -e allsym ]; then rm allsym; fi
 #host=`gcc -v 2>&1 | grep 'Target:' | sed 's/Target: //'`
 host=x86_64-linux-gnu
 for f in /lib/* /lib/$host/*; do
-    if [ ! -f $f ]; then continue; fi
+    echo "Processing $f"
+    if [ ! -f $f ]; then echo "Skipped $f"; continue; fi
     readelf -s --wide $f >>syms
     objdump -T $f | grep "GLIBC_" | sed 's/\(.*\)GLIBC_//; s/)//' | grep -v PRIVATE | column -t >>allsym
 done
