@@ -170,7 +170,7 @@ __asm__(".symver posix_spawn_file_actions_addchdir_np,posix_spawn_file_actions_a
 __asm__(".symver strtof32x_l,strtof32x_l@GLIBC_DONT_USE_THIS_SYMBOL");
 __asm__(".symver strtof128_l,strtof128_l@GLIBC_DONT_USE_THIS_SYMBOL");
 __asm__(".symver thrd_current,thrd_current@GLIBC_DONT_USE_THIS_SYMBOL");
-__asm__(".symver fcntl64,fcntl64@GLIBC_DONT_USE_THIS_SYMBOL");
+__asm__(".symver fcntl64,fcntl@GLIBC_2.2.5");
 __asm__(".symver strfromf32x,strfromf32x@GLIBC_DONT_USE_THIS_SYMBOL");
 __asm__(".symver tgkill,tgkill@GLIBC_DONT_USE_THIS_SYMBOL");
 __asm__(".symver pkey_set,pkey_set@GLIBC_DONT_USE_THIS_SYMBOL");
