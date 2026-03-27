@@ -80,10 +80,14 @@ extern __const __int32_t *__ctype_toupper; /* Case conversions.  */
 __asm__(".symver __ctype_b,__ctype_b@GLIBC_2.2.5");
 __asm__(".symver __ctype_tolower,__ctype_tolower@GLIBC_2.2.5");
 __asm__(".symver __ctype_toupper,__ctype_toupper@GLIBC_2.2.5");
-#else
+#elif __i386__
 __asm__(".symver __ctype_b,__ctype_b@GLIBC_2.0");
 __asm__(".symver __ctype_tolower,__ctype_tolower@GLIBC_2.0");
 __asm__(".symver __ctype_toupper,__ctype_toupper@GLIBC_2.0");
+#else
+__asm__(".symver __ctype_b,__ctype_b_loc@GLIBC_2.17");
+__asm__(".symver __ctype_tolower,__ctype_tolower_loc@GLIBC_2.17");
+__asm__(".symver __ctype_toupper,__ctype_toupper_loc@GLIBC_2.17");
 #endif
 
 #define	__isctype(c, type) \
